@@ -1,0 +1,27 @@
+/* Shelf */
+"My Shelf" = "My Shelf";
+"All" = "All";
+"Reading" = "Reading";
+"Finished" = "Finished";
+"Want to read" = "Want to read";
+
+/* Search */
+"Search" = "Search";
+"Search books..." = "Search books...";
+"Search online" = "Search online";
+"Add manually" = "Add manually";
+"No results" = "No results";
+"Add book" = "Add book";
+
+/* Book detail */
+"Update progress" = "Update progress";
+"Notes" = "Notes";
+"Delete book" = "Delete book";
+"Rating" = "Rating";
+
+/* Profile */
+"Profile" = "Profile";
+"Settings" = "Settings";
+"More" = "More";
+"Achievements" = "Achievements";
+"Quests" = "Quests";
