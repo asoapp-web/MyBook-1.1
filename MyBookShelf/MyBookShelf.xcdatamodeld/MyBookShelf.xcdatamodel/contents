@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="NO" userDefinedModelVersionIdentifier="">
+    <entity name="Book" representedClassName="Book" syncable="YES" codeGenerationType="class">
+        <attribute name="author" optional="NO" attributeType="String"/>
+        <attribute name="coverImageURL" optional="YES" attributeType="String"/>
+        <attribute name="currentPage" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dateAdded" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateFinished" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateStarted" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="genre" optional="NO" attributeType="String" defaultValueString=""/>
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isFavorite" optional="NO" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="isbn" optional="YES" attributeType="String"/>
+        <attribute name="localCoverImagePath" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="NO" attributeType="String" defaultValueString=""/>
+        <attribute name="openLibraryKey" optional="YES" attributeType="String"/>
+        <attribute name="pageCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="publishYear" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sourceType" optional="NO" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="NO" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="subjectsData" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="NO" attributeType="String"/>
+        <attribute name="totalPages" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="readingSessions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ReadingSession" inverseName="book" inverseEntity="ReadingSession"/>
+    </entity>
+    <entity name="ReadingSession" representedClassName="ReadingSession" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="durationMinutes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="endPage" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="pagesRead" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="startPage" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="book" optional="NO" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="readingSessions" inverseEntity="Book"/>
+    </entity>
+    <entity name="UserProfile" representedClassName="UserProfile" syncable="YES" codeGenerationType="class">
+        <attribute name="avatarIndex" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="completedQuestIDsData" optional="YES" attributeType="String"/>
+        <attribute name="currentLevel" optional="NO" attributeType="Integer 32" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="currentStreak" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dailyGoalPages" optional="NO" attributeType="Integer 32" defaultValueString="20" usesScalarValueType="YES"/>
+        <attribute name="dateJoined" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="displayName" optional="NO" attributeType="String" defaultValueString="Reader"/>
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lastReadingDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="localAvatarPath" optional="YES" attributeType="String"/>
+        <attribute name="longestStreak" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pendingNotifyAchievementIdsData" optional="YES" attributeType="String"/>
+        <attribute name="pendingNotifyQuestKeysData" optional="YES" attributeType="String"/>
+        <attribute name="selectedShelfStyleID" optional="NO" attributeType="String" defaultValueString="wood_classic"/>
+        <attribute name="totalBooksFinished" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="totalPagesRead" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="totalXP" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="unreadGamificationCount" optional="NO" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="unlockedAchievementIDsData" optional="YES" attributeType="String"/>
+        <attribute name="unlockedShelfStylesData" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Book" positionX="-63" positionY="-18" width="128" height="459"/>
+        <element name="ReadingSession" positionX="-63" positionY="99" width="128" height="134"/>
+        <element name="UserProfile" positionX="-63" positionY="279" width="128" height="279"/>
+    </elements>
+</model>
