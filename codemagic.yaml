@@ -15,8 +15,8 @@ workflows:
         XCODE_SCHEME: "MyBookShelf"
         APP_STORE_APPLE_ID: 6761006529
       # Жестко задаем новые версии
-        NEW_VERSION: "1.1"  # Укажите нужную версию
-        NEW_BUILD: "2"      # Укажите нужный билд-номер
+        NEW_VERSION: "1.2"  # Укажите нужную версию
+        NEW_BUILD: "3"      # Укажите нужный билд-номер
       xcode: latest
     scripts:
       - name: Set up provisioning profiles settings on Xcode project
